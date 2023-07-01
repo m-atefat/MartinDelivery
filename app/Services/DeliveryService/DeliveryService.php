@@ -155,6 +155,7 @@ class DeliveryService
                 ->whereNull('delivery_id')
                 ->where('status', OrderStatusesEnum::PENDING->value)
                 ->where('uuid', $uuid)
+                ->with(['sourceDetails', 'destinationDetails', 'business', 'delivery'])
                 ->lockForUpdate()
                 ->firstOrFail();
 
