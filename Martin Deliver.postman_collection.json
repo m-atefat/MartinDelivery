@@ -1,0 +1,705 @@
+{
+	"info": {
+		"_postman_id": "7f04f7df-02d0-498e-9243-dd1604651d9c",
+		"name": "Martin Deliver",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24148547"
+	},
+	"item": [
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "List Of All Pending Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{delivery_bear_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/delivery/orders/pending",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"orders",
+								"pending"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Of All Pending Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/delivery/orders/pending",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"delivery",
+										"orders",
+										"pending"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"9357e9d2-d105-4c43-a4c9-37f25619e860\",\n            \"business_information\": {\n                \"slug\": \"cum-fuga-aspernatur-velit-et-vero-et\"\n            },\n            \"status\": \"pending\",\n            \"source_details\": {\n                \"name\": \"ali\",\n                \"phone\": \"09121456987\",\n                \"address\": \"tehran\",\n                \"latitude\": \"56.15698600\",\n                \"longitude\": \"-80.69627800\"\n            },\n            \"destination_details\": {\n                \"name\": \"hasan\",\n                \"phone\": \"0912658974\",\n                \"address\": \"tehran, azadi\",\n                \"latitude\": \"50.15698600\",\n                \"longitude\": \"-70.69627800\"\n            },\n            \"created_at\": \"2023-07-01 12:49:01\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/v1/delivery/orders/pending?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/v1/delivery/orders/pending?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/v1/delivery/orders/pending?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/v1/delivery/orders/pending\",\n        \"per_page\": 10,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "List Of All Accepted Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{delivery_bear_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/delivery/orders/accepted",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"orders",
+								"accepted"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Of All Accepted Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/delivery/orders/accepted",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"delivery",
+										"orders",
+										"accepted"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"9357e9d2-d105-4c43-a4c9-37f25619e860\",\n            \"business_information\": {\n                \"slug\": \"cum-fuga-aspernatur-velit-et-vero-et\"\n            },\n            \"status\": \"accept\",\n            \"source_details\": {\n                \"name\": \"ali\",\n                \"phone\": \"09121456987\",\n                \"address\": \"tehran\",\n                \"latitude\": \"56.15698600\",\n                \"longitude\": \"-80.69627800\"\n            },\n            \"destination_details\": {\n                \"name\": \"hasan\",\n                \"phone\": \"0912658974\",\n                \"address\": \"tehran, azadi\",\n                \"latitude\": \"50.15698600\",\n                \"longitude\": \"-70.69627800\"\n            },\n            \"created_at\": \"2023-07-01 12:49:01\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/v1/delivery/orders/accepted?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/v1/delivery/orders/accepted?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/v1/delivery/orders/accepted?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/v1/delivery/orders/accepted\",\n        \"per_page\": 10,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Accept Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{delivery_bear_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/delivery/orders/9357e9d2-d105-4c43-a4c9-37f25619e860/accept",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"orders",
+								"9357e9d2-d105-4c43-a4c9-37f25619e860",
+								"accept"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Accept Order",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/delivery/orders/9357e9d2-d105-4c43-a4c9-37f25619e860/accept",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"delivery",
+										"orders",
+										"9357e9d2-d105-4c43-a4c9-37f25619e860",
+										"accept"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"is_assigned\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Set Status Of Order To Go-To-Source-Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{delivery_bear_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lat\": 56.15698600,\n    \"long\": -80.69627800\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/delivery/orders/9357e9d2-d105-4c43-a4c9-37f25619e860/go-to-source-location",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"orders",
+								"9357e9d2-d105-4c43-a4c9-37f25619e860",
+								"go-to-source-location"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Set Status Of Order To Go-To-Source-Location",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"lat\": 56.15698600,\n    \"long\": -80.69627800\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/delivery/orders/9357e9d2-d105-4c43-a4c9-37f25619e860/go-to-source-location",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"delivery",
+										"orders",
+										"9357e9d2-d105-4c43-a4c9-37f25619e860",
+										"go-to-source-location"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"9357e9d2-d105-4c43-a4c9-37f25619e860\",\n        \"delivery_information\": {\n            \"full_name\": \"Prof. Godfrey Lemke\",\n            \"phone\": \"09121234569\",\n            \"latitude\": 56.156986,\n            \"longitude\": -80.696278\n        },\n        \"business_information\": {\n            \"slug\": \"cum-fuga-aspernatur-velit-et-vero-et\"\n        },\n        \"status\": \"going_to_source_location\",\n        \"source_details\": {\n            \"name\": \"ali\",\n            \"phone\": \"09121456987\",\n            \"address\": \"tehran\",\n            \"latitude\": \"56.15698600\",\n            \"longitude\": \"-80.69627800\"\n        },\n        \"destination_details\": {\n            \"name\": \"hasan\",\n            \"phone\": \"0912658974\",\n            \"address\": \"tehran, azadi\",\n            \"latitude\": \"50.15698600\",\n            \"longitude\": \"-70.69627800\"\n        },\n        \"created_at\": \"2023-07-01 12:49:01\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Set Status Of Order To Go-To-Destination-Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{delivery_bear_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lat\": 56.15698600,\n    \"long\": -80.69627800\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/delivery/orders/9357e9d2-d105-4c43-a4c9-37f25619e860/go-to-destination-location",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"orders",
+								"9357e9d2-d105-4c43-a4c9-37f25619e860",
+								"go-to-destination-location"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Set Status Of Order To Go-To-Destination-Location",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"lat\": 56.15698600,\n    \"long\": -80.69627800\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/delivery/orders/9357e9d2-d105-4c43-a4c9-37f25619e860/go-to-destination-location",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"delivery",
+										"orders",
+										"9357e9d2-d105-4c43-a4c9-37f25619e860",
+										"go-to-destination-location"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"9357e9d2-d105-4c43-a4c9-37f25619e860\",\n        \"delivery_information\": {\n            \"full_name\": \"Prof. Godfrey Lemke\",\n            \"phone\": \"09121234569\",\n            \"latitude\": 56.156986,\n            \"longitude\": -80.696278\n        },\n        \"business_information\": {\n            \"slug\": \"cum-fuga-aspernatur-velit-et-vero-et\"\n        },\n        \"status\": \"going_to_destination_location\",\n        \"source_details\": {\n            \"name\": \"ali\",\n            \"phone\": \"09121456987\",\n            \"address\": \"tehran\",\n            \"latitude\": \"56.15698600\",\n            \"longitude\": \"-80.69627800\"\n        },\n        \"destination_details\": {\n            \"name\": \"hasan\",\n            \"phone\": \"0912658974\",\n            \"address\": \"tehran, azadi\",\n            \"latitude\": \"50.15698600\",\n            \"longitude\": \"-70.69627800\"\n        },\n        \"created_at\": \"2023-07-01 12:49:01\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Set Status Of Order To Done",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{delivery_bear_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lat\": 56.15698600,\n    \"long\": -80.69627800\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/delivery/orders/9357e9d2-d105-4c43-a4c9-37f25619e860/done",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"orders",
+								"9357e9d2-d105-4c43-a4c9-37f25619e860",
+								"done"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Set Status Of Order To Done",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"lat\": 56.15698600,\n    \"long\": -80.69627800\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/delivery/orders/9357e9d2-d105-4c43-a4c9-37f25619e860/done",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"delivery",
+										"orders",
+										"9357e9d2-d105-4c43-a4c9-37f25619e860",
+										"done"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"9357e9d2-d105-4c43-a4c9-37f25619e860\",\n        \"delivery_information\": {\n            \"full_name\": \"Prof. Godfrey Lemke\",\n            \"phone\": \"09121234569\"\n        },\n        \"business_information\": {\n            \"slug\": \"cum-fuga-aspernatur-velit-et-vero-et\"\n        },\n        \"status\": \"done\",\n        \"source_details\": {\n            \"name\": \"ali\",\n            \"phone\": \"09121456987\",\n            \"address\": \"tehran\",\n            \"latitude\": \"56.15698600\",\n            \"longitude\": \"-80.69627800\"\n        },\n        \"destination_details\": {\n            \"name\": \"hasan\",\n            \"phone\": \"0912658974\",\n            \"address\": \"tehran, azadi\",\n            \"latitude\": \"50.15698600\",\n            \"longitude\": \"-70.69627800\"\n        },\n        \"created_at\": \"2023-07-01 12:49:01\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Business",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{business_bear_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/business/orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"business",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"source_name\": \"ali\",\n    \"source_address\": \"tehran\",\n    \"source_phone\": \"09121456987\",\n    \"source_lat\": 56.156986,\n    \"source_long\": -80.696278,\n    \"destination_name\": \"hasan\",\n    \"destination_address\": \"tehran, azadi\",\n    \"destination_phone\": \"0912658974\",\n    \"destination_lat\": 50.156986,\n    \"destination_long\": -70.696278\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/business/orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"business",
+										"orders"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"order_uuid\": \"9357e9d2-d105-4c43-a4c9-37f25619e860\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Cancel Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{business_bear_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/business/orders/426213bf-7cb5-47ed-aeb7-21e847bc7c3d/cancel",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"business",
+								"orders",
+								"426213bf-7cb5-47ed-aeb7-21e847bc7c3d",
+								"cancel"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cancel Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/business/orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"business",
+										"orders"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uuid\": \"426213bf-7cb5-47ed-aeb7-21e847bc7c3d\",\n    \"status\": \"cancel\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		},
+		{
+			"key": "delivery_bear_token",
+			"value": "1|1mDqBEVbvHbC26PDLiMdFyhY9jlmlc67WlHrhuiV",
+			"type": "string"
+		},
+		{
+			"key": "business_bear_token",
+			"value": "2|wnk01v970uE7B4T3ddvdsBIL0lVBhUwMQlHXuyyO",
+			"type": "string"
+		}
+	]
+}

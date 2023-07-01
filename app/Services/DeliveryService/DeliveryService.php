@@ -153,6 +153,7 @@ class DeliveryService
             /** @var Order $order */
             $order = Order::query()
                 ->whereNull('delivery_id')
+                ->where('status', OrderStatusesEnum::PENDING->value)
                 ->where('uuid', $uuid)
                 ->lockForUpdate()
                 ->firstOrFail();
