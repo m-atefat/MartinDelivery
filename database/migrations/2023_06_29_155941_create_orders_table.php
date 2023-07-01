@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->integerIncrements('id');
+            $table->uuid()->index();
             $table->unsignedInteger('delivery_id')->nullable();
             $table->foreign('delivery_id')->references('id')->on('deliveries');
             $table->unsignedInteger('business_id');

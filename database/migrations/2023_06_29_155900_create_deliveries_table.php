@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('deliveries', function (Blueprint $table) {
             $table->integerIncrements('id');
             $table->string('phone',11);
+            $table->string('full_name');
             $table->decimal('lat',10,8);
             $table->decimal('long',11,8);
             $table->timestamps();

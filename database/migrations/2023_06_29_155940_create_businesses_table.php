@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('businesses', function (Blueprint $table) {
             $table->integerIncrements('id');
+            $table->string('slug')->unique();
             $table->string('webhook_url',2048);
             $table->timestamps();
             $table->softDeletes();

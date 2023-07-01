@@ -21,9 +21,10 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
+            'uuid'        => $this->faker->uuid(),
             'delivery_id' => Delivery::factory(),
             'business_id' => Business::factory(),
-            'status'      => $this->faker->randomElements(OrderStatusesEnum::values())
+            'status'      => $this->faker->randomElement(OrderStatusesEnum::values())
         ];
     }
 }

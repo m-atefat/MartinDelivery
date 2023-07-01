@@ -3,13 +3,13 @@
 namespace Database\Factories;
 
 use App\Models\Order;
-use App\Models\OrderSource;
+use App\Models\OrderSourceDetail;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends Factory<OrderSource>
+ * @extends Factory<OrderSourceDetail>
  */
-class OrderSourceFactory extends Factory
+class OrderSourceDetailFactory extends Factory
 {
     /**
      * Define the model's default state.

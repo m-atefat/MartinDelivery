@@ -18,9 +18,10 @@ class DeliveryFactory extends Factory
     public function definition(): array
     {
         return [
+            'full_name' => $this->faker->name(),
             'phone' => $this->faker->phoneNumber(),
-            'lat'   => $this->faker->latitude(),
-            'long'  => $this->faker->longitude()
+            'lat' => $this->faker->latitude(),
+            'long' => $this->faker->longitude()
         ];
     }
 }

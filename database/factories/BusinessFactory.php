@@ -18,6 +18,7 @@ class BusinessFactory extends Factory
     public function definition(): array
     {
         return [
+            'slug' => $this->faker->unique()->slug(),
             'webhook_url' => $this->faker->url()
         ];
     }
